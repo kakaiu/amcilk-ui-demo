@@ -7,7 +7,6 @@ platform_program * rand_pick_unfinished_job() {
     int num_running_job = get_num_running_job();
     int rand_num = util_random_generator()%(num_running_job);
     platform_program ** container_pool = get_container_pool();
-    //printf("[platform_scheduler_DREP]: finish, the number is %d\n", rand_num);
     platform_program * p;
     int c = 0;
     for (c=0; c<CONTAINER_COUNT; c++) {
