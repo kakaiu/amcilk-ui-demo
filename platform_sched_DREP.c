@@ -11,7 +11,6 @@ void job_scheduler(enum PLATFORM_SCHEDULER_TYPE e) {
                 give_core_to_container(new_p, i); //give core i to container new_p
             } //by default, a new container occupies no core unless we do give_core_to_container
         }
-
     } else if (e==EXIT_PROGRAM) { //when a job completes
         stop_p = get_stop_program_container();
         for (int i=2; i<get_total_num_core(); i++) {
